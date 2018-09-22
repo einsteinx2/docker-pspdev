@@ -43,6 +43,7 @@ RUN apt-get update \
     && cd /toolchain \
     && git checkout -qf $TOOLCHAIN_VERSION \
     && ./toolchain.sh \
+    && apt-get clean \
     && rm -rf \
         /pspdev/test.tmp \
         /toolchain \
